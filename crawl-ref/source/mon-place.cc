@@ -387,7 +387,8 @@ monster_type pick_random_monster(level_id place,
     if (allow_ood)
         _apply_ood(place);
 
-    place.depth = min(place.depth, branch_ood_cap(place.branch));
+    int corrected_depth = place.depth > 1 ? place.depth * 9 : place.depth;
+    place.depth = min(corrected_depth, branch_ood_cap(place.branch));
 
     if (final_place)
         *final_place = place;
