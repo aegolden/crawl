@@ -585,7 +585,7 @@ ENDMAP
 
 # Dummies give 2 XP and halt autotravel for adjacent players, used for flavour
 NAME:   minmay_elf_archery
-DEPTH:  Elf:2-
+DEPTH:  Elf:$
 ORIENT: float
 MONS:   deep elf archer / nothing, deep elf master archer
 MONS:   training dummy tile:mons_training_dummy
@@ -708,7 +708,7 @@ ENDMAP
 
 NAME:  guppyfry_elf_castle
 TAGS:  transparent
-DEPTH: Elf:2-
+DEPTH: Elf:$
 MONS:  deep elf mage / deep elf knight / deep elf archer
 MONS:  deep elf blademaster / deep elf death mage / deep elf sorcerer
 MONS:  plant
@@ -731,7 +731,7 @@ ENDMAP
 
 NAME:  guppyfry_elf_garden
 TAGS:  transparent
-DEPTH: Elf:2-
+DEPTH: Elf:$
 MONS:  deep elf mage
 MONS:  deep elf blademaster / deep elf master archer / deep elf sorcerer
 MONS:  plant
@@ -756,7 +756,7 @@ MAP
 ENDMAP
 
 NAME:  guppyfry_elf_altar
-DEPTH: Elf:2-
+DEPTH: Elf:$
 MONS:  deep elf knight w:5 / deep elf archer w:5 / deep elf mage
 MONS:  deep elf high priest
 SUBST: F = G:6 F:1
@@ -779,7 +779,7 @@ ENDMAP
 
 NAME:  guppyfry_elf_lava
 TAGS:  transparent
-DEPTH: Elf:2-
+DEPTH: Elf:$
 MONS:  deep elf mage
 MONS:  deep elf annihilator / deep elf death mage / deep elf demonologist
 KFEAT: v = general shop type:Elven suffix:Fire count:7 ; \
@@ -840,7 +840,7 @@ _______
 ENDMAP
 
 NAME:    nicolae_elf_stair_hall
-DEPTH:   Elf:2-
+DEPTH:   Elf:$
 TAGS:    extra
 SUBST:   v : vb
 SHUFFLE: {[(
@@ -1327,7 +1327,7 @@ ENDMAP
 ##############################################################################
 ##############################################################################
 #
-# Elf:2 Hall of Blades.
+# Elf:$ Hall of Blades.
 #
 # An attempt to salvage the lost branch.
 ##############################################################################
@@ -1335,7 +1335,7 @@ ENDMAP
 
 NAME:     elven_hall_of_blades_hangedman_original
 TAGS:     no_dump no_item_gen no_monster_gen
-PLACE:    Elf:2
+PLACE:    Elf:$
 ORIENT:   north
 MONS:     deep elf mage
 MONS:     deep elf knight w:11 / deep elf mage w:1
@@ -1405,7 +1405,7 @@ ENDMAP
 
 NAME:     elven_hall_of_blades_hangedman_alternative
 TAGS:     no_dump no_item_gen no_monster_gen
-PLACE:    Elf:2
+PLACE:    Elf:$
 WEIGHT:   5
 ORIENT:   north
 MONS:     deep elf mage
@@ -1462,7 +1462,7 @@ ENDMAP
 NAME:     elven_hall_of_blades_dummy
 # Not tagged 'dummy' because then the veto doesn't run.
 TAGS:     no_dump
-PLACE:    Elf:2
+PLACE:    Elf:$
 ORIENT:   float
 veto {{ return crawl.game_started() and not dgn.br_exists("Blade") }}
 MAP
