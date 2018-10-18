@@ -2774,7 +2774,7 @@ ENDMAP
 
 NAME:   ragdoll_tomb_raider
 TAGS:   no_item_gen no_monster_gen patrolling
-DEPTH:  D:14-, Depths, Crypt, !Crypt:$
+DEPTH:  D:3-, Depths, Crypt, !Crypt:$
 ORIENT: float
 KITEM:  $ = amulet_of_vitality / acquire any
 KITEM:  12345d = gold / any / nothing
@@ -3734,7 +3734,7 @@ NAME: cheibrodos_grave_circle
 DEPTH: D:7-11
 TAGS: no_item_gen no_monster_gen
 ORIENT: float
-MONS: place:D:14 skeleton w:5 / place:D:14 zombie, shadow imp, hellwing
+MONS: place:D:3 skeleton w:5 / place:D:3 zombie, shadow imp, hellwing
 NSUBST: . = 5:1 / 3=1. / 3:2 / 2=2., " = 1:*% / 4=$%.
 SUBST: . = .....--__tG
 KMONS: t = withered plant

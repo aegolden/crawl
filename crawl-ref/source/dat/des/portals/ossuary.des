@@ -682,7 +682,7 @@ SHUFFLE: ABI/CDJ/EFK/GHL
 SUBST:   A : ., B : A, I : <
 SUBST:   EFKGHL : d
 SUBST:   CDJ = 1112
-MONS:    generate_awake zombie place:D:6 /\
+MONS:    generate_awake zombie place:D:3 /\
          w:5 generate_awake mummy
 MONS:    w:15 withered plant /\
          mummy \
