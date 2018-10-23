@@ -421,6 +421,11 @@ NORETURN static void _launch_game()
                     << species_name(you.species)
                     << " " << get_job_name(you.char_class) << ".</yellow>"
                     << endl;
+        if (game_start) {
+            you.exp_available += 10 * (exp_needed(9) - you.experience);
+            train_skills();
+            adjust_level(8, false);
+        }
     }
 
 #ifdef USE_TILE
