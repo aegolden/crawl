@@ -3850,10 +3850,8 @@ static void _builder_items()
         specif_type = OBJ_GOLD;  // Lots of gold in the orcish mines.
         items_levels *= 2;       // Four levels' worth, in fact.
     } else {
-        items_levels *= 25;
-        items_levels /= 20;
-        items_wanted *= 15;
-        items_wanted /= 10;
+        items_wanted *= 3;
+        items_levels *= 9;
     }
 
     for (i = 0; i < items_wanted; i++)
