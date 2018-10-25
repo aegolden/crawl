@@ -268,7 +268,7 @@ function choose_mset_2(e)
                yaktaur captain w:3")
 -- Vaults
   elseif rnd < 99 then
-    e.kmons("1 = place:Vaults:3 / yaktaur w:2 / vault guard w:5")
+    e.kmons("1 = place:Vaults:$ / yaktaur w:2 / vault guard w:5")
 -- Pan
   elseif rnd < 104 then
     e.kmons("1 = lesser demon / common demon w:5 / pandemonium lord w:2")
@@ -336,7 +336,7 @@ function choose_mset_3(e)
                spriggan druid w:2 / spriggan air mage w:5 / spriggan berserker w:5")
 -- Shoals
   elseif rnd < 49 then
-    e.kmons("1 = place:Shoals:3 / place:Shoals:$ w:45 / merfolk javelineer /\
+    e.kmons("1 = place:Shoals:$ / place:Shoals:$ w:45 / merfolk javelineer /\
                  merfolk impaler / merfolk aquamancer")
     e.subst(". = W..")
     e.kfeat("1 = shallow_water")
