@@ -2618,7 +2618,7 @@ void gain_exp(unsigned int exp_gained, unsigned int* actual_gain)
 
     // In quick crawl we need to gain XP faster to offset the fact that
     // there are fewer monsters to kill, etc.
-    exp_gained *= 4;
+    exp_gained *= 7;
 
     // xp-gated effects that don't use sprint inflation
     _handle_xp_penance(exp_gained);
