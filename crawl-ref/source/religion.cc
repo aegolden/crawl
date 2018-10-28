@@ -2460,8 +2460,9 @@ bool gain_piety(int original_gain, int denominator, bool should_scale_piety)
         return false;
     }
 
-    // Need to gain piety faster in a quick game.
-    original_gain *= 4;
+    // Need to gain piety faster in a quick game, except not for Oka's tactical piety.
+    if (!you_worship(GOD_OKAWARU))
+        original_gain *= 4;
 
     int pgn = should_scale_piety ? piety_scale(original_gain) : original_gain;
 
