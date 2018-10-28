@@ -23,9 +23,7 @@ end
 
 function abyss_entry(e, glyph)
   e.tags("extra luniq_enter_abyss chance_enter_abyss")
-  e.depth_chance("Depths:1-3", 3333)
-  e.depth_chance("Depths:4",   10000)
-  e.depth_chance("Depths:5-",  3333)
+  e.depth_chance("Depths:1", 10000)
 -- D:21-27 entries for save compat, remove when TAG_MAJOR_VERSION > 34
   e.depth_chance("D:21-24", 3333)
   e.depth_chance("D:25",    10000)
