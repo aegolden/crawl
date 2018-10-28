@@ -3253,9 +3253,9 @@ static void _apply_monk_bonus()
     if (you_worship(GOD_RU))
         you.props[RU_SACRIFICE_PROGRESS_KEY] = 9999;
     else if (you_worship(GOD_USKAYAW))  // Gaining piety past this point does nothing
-        gain_piety(15, 1, false); // of value with this god and looks weird.
+        gain_piety(3, 1, false); // of value with this god and looks weird.
     else
-        gain_piety(35, 1, false);
+        gain_piety(8, 1, false);
 }
 
 /// Transfer some piety from an old good god to a new one, if applicable.
