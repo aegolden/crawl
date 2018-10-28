@@ -6042,6 +6042,9 @@ void ru_reset_sacrifice_timer(bool clear_timer, bool faith_penalty)
     if (crawl_state.game_is_sprint())
         delay /= SPRINT_MULTIPLIER;
 
+    // Shorter delay for quick game.
+    delay /= 5;
+
     you.props[RU_SACRIFICE_DELAY_KEY] = delay;
     you.props[RU_SACRIFICE_PROGRESS_KEY] = 0;
 }
