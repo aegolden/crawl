@@ -3369,6 +3369,7 @@ static void _set_initial_god_piety()
         int delay = 50;
         if (crawl_state.game_is_sprint())
             delay /= SPRINT_MULTIPLIER;
+        delay /= 5;
         you.props[RU_SACRIFICE_DELAY_KEY] = delay;
     }
         you.props[RU_SACRIFICE_PENALTY_KEY] = 0;
