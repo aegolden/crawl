@@ -100,14 +100,14 @@ void initialise_branch_depths()
         brdepth[it->id] = it->numlevels;
 }
 
-#define MAX_OVERFLOW_LEVEL 9
+#define MAX_OVERFLOW_LEVEL 1
 
 static void _use_overflow_temple(vector<god_type> temple_gods)
 {
     CrawlVector &overflow_temples
         = you.props[OVERFLOW_TEMPLES_KEY].get_vector();
 
-    const unsigned int level = random_range(2, MAX_OVERFLOW_LEVEL);
+    const unsigned int level = MAX_OVERFLOW_LEVEL;//random_range(2, MAX_OVERFLOW_LEVEL);
 
     // List of overflow temples on this level.
     CrawlVector &level_temples = overflow_temples[level - 1].get_vector();
