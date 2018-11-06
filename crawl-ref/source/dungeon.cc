@@ -2633,11 +2633,8 @@ static bool _pan_level()
         }
     }
 
-    // Unique pan lords become more common as you travel through pandemonium.
-    // On average it takes about 14 levels to see all four, and on average
-    // about 5 levels to see your first.
-    if (x_chance_in_y(1 + place_info.levels_seen, 20 + place_info.levels_seen)
-        && !all_demons_generated)
+    // Keep generating pan lord floors until all pan lords have been generated.
+    if (!all_demons_generated)
     {
         do
         {
