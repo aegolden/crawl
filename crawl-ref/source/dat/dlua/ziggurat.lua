@@ -58,6 +58,7 @@ end
 function ziggurat_build_level(e)
   if you.depth() == 1 then
     dgn.persist.ziggurat = { }
+    you.set_depth(25) -- warp ahead to level 25
     initialise_ziggurat(dgn.persist.ziggurat, portal)
   end
   local builder = zig().builder
