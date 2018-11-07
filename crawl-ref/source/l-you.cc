@@ -439,6 +439,19 @@ LUARET1(you_branch, string, level_id::current().describe(false, false).c_str())
  * @function depth
  */
 LUARET1(you_depth, number, you.depth)
+/*** Your current depth in that branch.
+ * @treturn int
+ * @tparam int x
+ * @function set_depth
+ */
+LUAFN(you_set_depth) 
+{
+    if (!lua_isnoneornil(ls, 1)) {
+        int new_depth = lua_tointeger(ls, 1);
+        you.depth = new_depth;
+    }
+    PLUARET(number, you.depth);
+}
 /*** What fraction of the branch you've gone into.
  * @treturn number
  * @function depth_fraction
@@ -1547,6 +1560,7 @@ static const struct luaL_reg you_dlib[] =
 { "change_species",     you_change_species },
 #ifdef WIZARD
 { "set_xl",             you_set_xl },
+{ "set_depth",          you_set_depth },
 #endif
 
 { nullptr, nullptr }
