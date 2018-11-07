@@ -418,7 +418,7 @@ ENDMAP
 # Tomb:1
 #
 NAME:     tomb_1
-PLACE:    Tomb:1
+PLACE:    Tomb:3
 
 ORIENT:   encompass
 TAGS:     no_dump
@@ -979,7 +979,7 @@ ENDMAP
 # Tomb:3
 #
 NAME:     tomb_3
-PLACE:    Tomb:$
+PLACE:    Tomb:1
 ORIENT:   encompass
 TAGS:     no_rotate no_dump
 SUBVAULT: A : tomb_3_rune
