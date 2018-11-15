@@ -117,7 +117,7 @@ const Branch branches[NUM_BRANCHES] =
       'B', {}, BRANCH_NOISE_QUIET },
 #endif
 
-    { BRANCH_CRYPT, BRANCH_VAULTS, 1, 1, 1, 19,
+    { BRANCH_CRYPT, BRANCH_VAULTS, 2, 2, 1, 19,
       BFLAG_DANGEROUS_END,
       DNGN_ENTER_CRYPT, DNGN_EXIT_CRYPT, NUM_FEATURES,
       "Crypt", "the Crypt", "Crypt",
@@ -125,7 +125,7 @@ const Branch branches[NUM_BRANCHES] =
       LIGHTGREY, BROWN,
       'C', {}, BRANCH_NOISE_QUIET },
 
-    { BRANCH_TOMB, BRANCH_CRYPT, 1, 1, 1, 21,
+    { BRANCH_TOMB, BRANCH_VAULTS, 1, 1, 1, 21,
       BFLAG_ISLANDED | BFLAG_DANGEROUS_END | BFLAG_NO_SHAFTS,
       DNGN_ENTER_TOMB, DNGN_EXIT_TOMB, NUM_FEATURES,
       "Tomb", "the Tomb of the Ancients", "Tomb",
