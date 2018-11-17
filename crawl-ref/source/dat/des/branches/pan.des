@@ -2612,12 +2612,9 @@ TAGS:    pan_fixed_rune_hellions pan_fixed_lure_hellions
 ORIENT:  float
 MONS:    fire bat, hellion, hellephant
 KMONS:   O = pandemonium lord
-: if demonic_rune_vault_is_decoy() then
-KITEM:   O = acquire any / demonic rune of zot mimic
-: else
 KITEM:   O = demonic rune of zot
-: end
 KFEAT:   { = {
+KFEAT:   P = exit_pandemonium
 SHUFFLE: Aa / Bb / Cc / Dd / Ee / Ff / Gg / Hh
 SUBST:   ABCabc = l, DEFdef = .
 SUBST:   G : l., g : l., H : l., h : l.
@@ -2627,7 +2624,7 @@ MAP
  .ElllllllllllB.
 .Flllllh2alllllC1
 .Ellllg2{2bllllD.
-Dllllf2.2.2cllllC
+Dllllf2P2.2cllllC
 lllle2.2O||.dllll
 lllld.||32.2ellll
 Cllllc2.2.2fllllD
@@ -2685,13 +2682,10 @@ TAGS:    pan_fixed_rune_pain pan_fixed_lure_pain
 ORIENT:  float
 MONS:    pandemonium lord, brimstone fiend
 MONS:    tormentor, smoke demon, any demon
-: if demonic_rune_vault_is_decoy() then
-KITEM:   O = acquire any / demonic rune of zot mimic
-: else
 KITEM:   O = demonic rune of zot
-: end
 KFEAT:   m = iron_grate
 KFEAT:   { = {
+KFEAT:   P = exit_pandemonium
 NSUBST:  3 = 6:3 / *:.
 NSUBST:  4 = 16:4 / 4 = 4. / 2 = 234 / *:.
 MAP
@@ -2707,7 +2701,7 @@ c3c4cl...lc4c3c
 c5c4cl.5.lc4c5c
 c3c4ml...lm4c3c
 c3c4cl...lc4c3c
-c5c4cl...lc4c5c
+c5c4cl.P.lc4c5c
 c.m4ml...lm4m.c
 c.c4cl.5.lc4c.c
 c.cccl5.5lccc.c
@@ -2837,11 +2831,8 @@ MONS:    brimstone fiend / ice fiend / tzitzimitl / hell sentinel
 KMONS:   p = demonic plant
 KMONS:   P = pandemonium lord
 ITEM:    any potion
-: if demonic_rune_vault_is_decoy() then
-KITEM:   O = acquire any / demonic rune of zot mimic
-: else
 KITEM:   O = demonic rune of zot
-: end
+KFEAT:   Q = exit_pandemonium
 KFEAT:   D = granite_statue
 KFEAT:   X = rock_wall
 KFEAT:   _ = floor
@@ -2874,7 +2865,7 @@ xp.x.....................---------------_....xXXX
 +.._.........{..........D-------P-------_.O5.xXXX
 xp.x.....................---------------_....xXXX
 xxxx.....................---------------_.d6.xXXX
-   x.xxxxxxxxxxxxxxxxx..x---------------_....xXXX
+   x.xxxxxxxxxxxxxxxxx..x---------------_...QxXXX
    x.x0d0x.d0x0d.x0d0x..x---------------xxxxxxXXX
    x.x0..x0..x..0x..0x..x-------------1-x
    x._..............._..x2-------------3x
