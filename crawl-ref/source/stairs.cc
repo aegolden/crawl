@@ -367,29 +367,17 @@ static void _rune_effect(dungeon_feature_type ftype)
         ASSERT(runes.size() >= 1);
         shuffle_array(runes);
 
+
+        mprf("You insert the %s rune into the lock.", rune_type_name(runes[0]));
+
         // Zot is extra flashy.
         if (ftype == DNGN_ENTER_ZOT)
         {
-            ASSERT(runes.size() >= 3);
-
-            mprf("You insert the %s rune into the lock.", rune_type_name(runes[2]));
-#ifdef USE_TILE_LOCAL
-            tiles.add_overlay(you.pos(), tileidx_zap(rune_colour(runes[2])));
-            update_screen();
-#else
-            flash_view(UA_BRANCH_ENTRY, rune_colour(runes[2]));
-#endif
-            mpr("The lock glows eerily!");
-            // included in default force_more_message
-
-            mprf("You insert the %s rune into the lock.", rune_type_name(runes[1]));
             big_cloud(CLOUD_BLUE_SMOKE, &you, you.pos(), 20, 7 + random2(7));
             viewwindow();
             mpr("Heavy smoke blows from the lock!");
             // included in default force_more_message
         }
-
-        mprf("You insert the %s rune into the lock.", rune_type_name(runes[0]));
 
         if (silenced(you.pos()))
             mpr("The gate opens wide!");
